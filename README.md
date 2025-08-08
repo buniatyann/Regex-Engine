@@ -134,34 +134,34 @@ try {
 regex-engine/
 ├── include/
 │   ├── ast/
-│   │   └── ast.hpp              # AST structure for regex patterns
+│       └── ast.hpp              # AST structure for regex patterns
 │   ├── engine/
-│   │   ├── engine_dfa.hpp       # DFA engine interface
-│   │   └── engine_nfa.hpp       # NFA engine interface
+│       ├── engine_dfa.hpp       # DFA engine interface
+│       └── engine_nfa.hpp       # NFA engine interface
 │   ├── grammar/
-│   │   └── grammar.hpp          # Regex parser
+│       └── grammar.hpp          # Regex parser
 │   ├── match/
-│   │   ├── match.hpp            # Match result representation
-│   │   └── matchers.hpp         # Match component classes
+│       ├── match.hpp            # Match result representation
+│       └── matchers.hpp         # Match component classes
 │   ├── regex/
-│   │   ├── conversion_builder.hpp # AST → NFA conversion
-│   │   ├── regex.hpp            # Main regex interface
-│   │   └── regex_error.hpp      # Exception handling
+│       ├── conversion_builder.hpp # AST → NFA conversion
+│       ├── regex.hpp            # Main regex interface
+│       └── regex_error.hpp      # Exception handling
 ├── src/
 │   ├── ast/                      
-│   │   └── ast.cpp              # AST node implementation
+│       └── ast.cpp              # AST node implementation
 │   ├── engine/
-│   │   ├── engine_dfa.cpp       # DFA engine implementation
-│   │   └── engine_nfa.cpp       # NFA engine implementation
+│       ├── engine_dfa.cpp       # DFA engine implementation
+│       └── engine_nfa.cpp       # NFA engine implementation
 │   ├── grammar/
-│   │   └── grammar.cpp          # Regex parser implementation
+│       └── grammar.cpp          # Regex parser implementation
 │   ├── match/
-│   │   ├── match.cpp            # Match result implementation
-│   │   └── matchers.cpp         # Matcher implementations
+│       ├── match.cpp            # Match result implementation
+│       └── matchers.cpp         # Matcher implementations
 │   ├── regex/
-│   │   ├── conversion_builder.cpp    # AST to NFA conversion implementation
-│   │   ├── regex.cpp            # Main regex class implementation
-│   │   └── regex_error.cpp      # Exception handling implementation
+│       ├── conversion_builder.cpp    # AST to NFA conversion implementation
+│       ├── regex.cpp            # Main regex class implementation
+│       └── regex_error.cpp      # Exception handling implementation
 ├── CMakeLists.txt               # Build configuration
 └── README.md                    # Project documentation
 ```
