@@ -92,7 +92,8 @@ int main() {
     auto match = re.match(input);
     if (match.is_matched()) {
         std::cout << "DFA Match from " << match.get_start() << " to " << match.get_end() << std::endl;
-    } else {
+    }
+    else {
         std::cout << "No match found" << std::endl;
     }
     return 0;
@@ -110,7 +111,8 @@ int main() {
     auto match = re.match(input);
     if (match.is_matched()) {
         std::cout << "NFA Match from " << match.get_start() << " to " << match.get_end() << std::endl;
-    } else {
+    }
+    else {
         std::cout << "No match found" << std::endl;
     }
     return 0;
