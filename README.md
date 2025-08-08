@@ -37,40 +37,7 @@ cd regex-engine
 - Standard C++ library only — **no external dependencies**.
 - Supported platforms: Linux, macOS, Windows.
 
-### 3. Build with CMake deleteable
-**`CMakeLists.txt` example:**
-```cmake
-cmake_minimum_required(VERSION 3.10)
-project(RegexEngine)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -O3")
-
-include_directories(include)
-
-set(SOURCES
-    src/ast.cpp
-    src/match.cpp
-    src/matchers.cpp
-    src/grammar.cpp
-    src/conversion_builder.cpp
-    src/engine_nfa.cpp
-    src/engine_dfa.cpp
-    src/regex.cpp
-    src/regex_error.cpp
-)
-
-add_library(regex_engine STATIC ${SOURCES})
-
-# Optional test executable
-if(EXISTS "${CMAKE_SOURCE_DIR}/main.cpp")
-    add_executable(regex_engine_exe main.cpp)
-    target_link_libraries(regex_engine_exe regex_engine)
-endif()
-
-install(TARGETS regex_engine ARCHIVE DESTINATION lib)
-install(DIRECTORY include/ DESTINATION include FILES_MATCHING PATTERN "*.hpp")
-```
+### 3. Build with CMake
 
 #### Compile on Linux/macOS:
 ```bash
@@ -161,15 +128,6 @@ try {
 }
 ```
 
-## 🧪 Testing
-
-To verify the library, use the test executable (if `main.cpp` is provided) or write unit tests with a framework like Catch2 or Google Test. Example test setup:
-```bash
-# Run test executable (if built)
-./build/regex_engine_exe  # Linux/macOS
-build\Release\regex_engine_exe.exe  # Windows
-```
-
 ## 📂 Project Structure
 
 ```
@@ -190,16 +148,20 @@ regex-engine/
 │   │   ├── regex.hpp            # Main regex interface
 │   │   └── regex_error.hpp      # Exception handling
 ├── src/
-│   ├── ast.cpp                  # AST node implementation
-│   ├── engine_dfa.cpp           # DFA engine implementation
-│   ├── engine_nfa.cpp           # NFA engine implementation
-│   ├── grammar.cpp              # Regex parser implementation
-│   ├── match.cpp                # Match result implementation
-│   ├── matchers.cpp             # Matcher implementations
-│   ├── regex.cpp                # Main regex class implementation
-│   ├── regex_error.cpp          # Exception handling implementation
-│   ├── conversion_builder.cpp   # AST to NFA conversion implementation
-│   ├── main.cpp                 # Optional test executable (if included)
+│   ├── ast/                      
+│   │   └── ast.cpp              # AST node implementation
+│   ├── engine/
+│   │   ├── engine_dfa.cpp       # DFA engine implementation
+│   │   └── engine_nfa.cpp       # NFA engine implementation
+│   ├── grammar/
+│   │   └── grammar.cpp          # Regex parser implementation
+│   ├── match/
+│   │   ├── match.cpp            # Match result implementation
+│   │   └── matchers.cpp         # Matcher implementations
+│   ├── regex/
+│   │   ├── conversion_builder.cpp    # AST to NFA conversion implementation
+│   │   ├── regex.cpp            # Main regex class implementation
+│   │   └── regex_error.cpp      # Exception handling implementation
 ├── CMakeLists.txt               # Build configuration
 └── README.md                    # Project documentation
 ```
