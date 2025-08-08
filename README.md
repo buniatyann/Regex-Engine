@@ -25,7 +25,7 @@ A high-performance **C++ library** for parsing and matching **regular expression
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/buniatyann/Regex-Engine.git]
+git clone https://github.com/buniatyann/Regex-Engine.git
 cd Regex-Engine
 ```
 
