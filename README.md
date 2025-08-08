@@ -117,7 +117,7 @@ int main() {
 }
 ```
 
-## 🛠 Error Handling
+## Error Handling
 
 Invalid patterns throw a `regex::regex_error`:
 ```cpp
