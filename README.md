@@ -37,7 +37,7 @@ cd regex-engine
 - Standard C++ library only — **no external dependencies**.
 - Supported platforms: Linux, macOS, Windows.
 
-### 3. Build with CMake
+### 3. Build with CMake deleteable
 **`CMakeLists.txt` example:**
 ```cmake
 cmake_minimum_required(VERSION 3.10)
