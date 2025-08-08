@@ -2,7 +2,7 @@
 
 A high-performance **C++ library** for parsing and matching **regular expressions**, designed with a modular architecture for efficient parsing, AST construction, NFA/DFA conversion, and matching. It features both **Nondeterministic Finite Automaton (NFA)** and **Deterministic Finite Automaton (DFA)** engines, offering flexibility for lightweight matching (NFA) or optimized performance (DFA). Built with **extensibility** and **robust error handling** in mind.
 
-## ✨ Features
+## Features
 
 - **Rich regex syntax**: Supports a wide range of constructs for flexible pattern matching:
   - Literals: `a`, `b`, …
@@ -21,7 +21,7 @@ A high-performance **C++ library** for parsing and matching **regular expression
 - **Modular architecture**: Cleanly separates parsing, AST construction, NFA/DFA conversion, and matching for extensibility.
 - **Use cases**: Ideal for text processing, input validation (e.g., email addresses), search functionality, and lexical analysis in compilers or tools.
 
-## 📦 Installation
+## Installation
 
 ### 1. Clone the Repository
 ```bash
@@ -77,7 +77,7 @@ find_library(REGEX_ENGINE regex_engine HINTS /usr/local/lib)
 target_link_libraries(your_target ${REGEX_ENGINE})
 ```
 
-## 🚀 Usage
+## Usage
 
 The main interface is the `regex::regex` class, which supports both NFA and DFA engines. The `match::match` class returns match results (success, start, and end positions).
 
@@ -128,7 +128,7 @@ try {
 }
 ```
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 regex-engine/
@@ -166,12 +166,12 @@ regex-engine/
 └── README.md                    # Project documentation
 ```
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please:
 1. Open an **issue** for bugs or feature requests.
 2. Submit **pull requests** with clear descriptions of changes.
 
-## 📜 License
+## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the `LICENSE` file for details.
