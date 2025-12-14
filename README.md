@@ -464,5 +464,3 @@ Please:
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the `LICENSE` file for details.
 
 ---
-
-**Keywords**: C++17, Regex Engine, NFA, DFA, Thompson's Construction, Subset Construction, Design Patterns, Strategy Pattern, Builder Pattern, MVC Pattern, State Machine, Compiler Design, Finite Automata, Grep Clone
