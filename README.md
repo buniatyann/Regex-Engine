@@ -387,7 +387,6 @@ regex-engine/
 │
 ├── main.cpp                      # Grep tool entry point
 ├── CMakeLists.txt               # Build configuration
-├── CLAUDE.md                    # Development guide
 └── README.md                    # This file
 ```
 
